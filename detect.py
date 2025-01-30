@@ -13,7 +13,7 @@ offset = 20
 imgSize = 300
 counter = 0
 
-folder = '/Users/USER/desktop/signLang2'
+folder = '/Users/ELITEBOOK/OneDrive/Desktop/SignLang/Sign-Lang-Detection/Data/I'
 
 while True:
     success, img = cap.read()
@@ -50,11 +50,11 @@ while True:
         cv2.imshow('ImageCrop',imgCrop)
         cv2.imshow('ImageWhite', imgWhite)
 
-        cv2.imshow('Image', img)
-        key = cv2.waitKey(1)
-        if key == ord('s'):
-            counter += 1
-            cv2.imwrite(f'{folder}/image_{time.time()}.jpg', imgWhite)
-            print(counter) 
+    cv2.imshow('Image', img)
+    key = cv2.waitKey(1)
+    if key == ord('s'):
+        counter += 1
+        cv2.imwrite(f'{folder}/image_{time.time()}.jpg', imgWhite)
+        print(counter) 
         
 
